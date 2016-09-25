@@ -9,7 +9,7 @@ import java.util.Iterator;
 class Troco {
 
     protected PapelMoeda[] papeisMoeda;
-
+   
     public Troco(int valor) {
         papeisMoeda = new PapelMoeda[6];
         int[] tipoPapelMoeda = {2, 5, 10, 20, 50, 100};
@@ -26,6 +26,9 @@ class Troco {
                     valor = valor - (tipoPapelMoeda[i] * count);
                 }
             }
+        int count = 0;
+        while (valor % 100 != 0) {
+            count++;
         }
     }
 
