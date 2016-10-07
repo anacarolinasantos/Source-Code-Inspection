@@ -63,11 +63,4 @@ public class TicketMachineTest {
         ticketMachine.inserir(3);
         assertEquals(ticketMachine.getSaldo(), 3);
     }
-    
-    @Test
-    public void retornaTroco() throws PapelMoedaInvalidaException {
-        ticketMachine.inserir(10);
-        Iterator<PapelMoeda> troco = ticketMachine.getTroco();
-        assertEquals(troco, 10);
-    }
 }
